@@ -3,6 +3,9 @@
 # Contexto
 Este projeto trata-se de um teste para o processo seletivo da Contele, a aplicação consiste em  uma ferramenta que obtem a localização no intervalo de tempo determinado e quando online sincroniza com o banco de dados, caso esteja offline, salva os pacotes com a localização no estado global da aplicação.
 
+
+![Screenshot 2023-02-12 18 17 06](https://user-images.githubusercontent.com/98190573/218337809-e55c436a-cf63-4acf-9218-3034716214f3.png)
+
 ## Técnologias usadas
 
 Front-end:
@@ -19,8 +22,19 @@ Back-end:
 
 ## Logica de Desenvovimento
 * Localização: ao escolher o intervalo e ativar o botão toggle, será ativado um setInterval com o valor escolhido, dentro dele o Expo Location vai pegar a localização e salvará no estado global da aplicação, até ser desativado;
+
+![Screenshot 2023-02-12 18 24 54](https://user-images.githubusercontent.com/98190573/218338097-65c3b390-0068-474b-91b9-3dc1fdb387c3.png)
+
 * Sincronização: a todo momento será verificado se possui conexão com a rede, caso positivo, será verificado se tem packs no estado global e será sincronizado com a api;
+
+
+![Screenshot 2023-02-12 18 26 18](https://user-images.githubusercontent.com/98190573/218338215-3ce2fa80-20a8-4b87-8db8-92adaba042f4.png)
+
+
 * Renderização dos Status: será feito um fecth da api com os packs sincronizados e será verificado se possuí packs no estado global, será mesclado os dois arrays de dados e verificado através dos ids da Api para definir o status da sincronização sendo "Sincronizado ou Pendente sincronizar"
+
+![Screenshot 2023-02-12 18 29 11](https://user-images.githubusercontent.com/98190573/218338347-76793fa8-aeb4-48e6-9d46-55760a71dfbb.png)
+
 
 ## Instalando Dependências
 
